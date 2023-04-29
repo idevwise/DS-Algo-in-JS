@@ -16,8 +16,8 @@
  *
  * The following program answers the first question.
  */
-function bfs(graph, val) {
-  let que = graph["you"];
+function bfs(graph, startingNode, val) {
+  let que = graph[startingNode];
   const searched = {};
   let current;
   while (que.length !== 0) {
@@ -25,8 +25,11 @@ function bfs(graph, val) {
     if (current === val) {
       return true;
     }
-    searched[current] = 1;
-    que = que.concat(graph[current]);
+
+    if (!searched[current]) {
+      que = que.concat(graph[current]);
+      searched[current] = true;
+    }
     que.shift();
   }
   if (que.length === 0) {
@@ -45,11 +48,11 @@ graph["you"] = ["alice", "bob", "claire"];
 graph["bob"] = ["anuj", "peggy"];
 graph["alice"] = ["peggy"];
 graph["claire"] = ["thom", "jhonny"];
-graph["anuj"] = [];
+graph["anuj"] = ["you"];
 graph["thom"] = [];
 graph["peggy"] = [];
 graph["jhonny"] = [];
 
-console.log(bfs(graph, "thom"));
-console.log(bfs(graph, "rahul"));
-console.log(bfs(graph, "jhonny"));
+console.log(bfs(graph, "you", "thom"));
+console.log(bfs(graph, "you", "rahul"));
+console.log(bfs(graph, "you", "jhonny"));
