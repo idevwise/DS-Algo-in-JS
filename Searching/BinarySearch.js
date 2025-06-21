@@ -5,7 +5,7 @@ function binarySearch(list, item) {
         if (list[mid] === item) {
             return mid;
         } else if (list[mid] < item) {
-            low = mid + 1;
+            low = mid;
         } else {
             high = mid - 1;
         }
