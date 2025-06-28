@@ -4,7 +4,7 @@ This repository collects a few data structure and algorithm examples written in 
 
 ## Folder overview
 
-- **DataStructures/** – implementations for linked lists, hash tables and more.
+- **DataStructures/** – implementations for linked lists, hash tables, Merkle trees and more.
 - **Graphs/** – graph related algorithms (for example breadth first search).
 - **Searching/** – search algorithms such as binary search.
 - **Sorting/** – sorting algorithms like quick sort and merge sort.
@@ -19,6 +19,7 @@ Each JavaScript file can be executed directly with Node.js. Use `node FILE.js` a
 
 ```bash
 node Sorting/quickSort.js
+node DataStructures/MerkleTree/MerkleTree.js
 ```
 
 Run any other script in the same manner to see its output.
