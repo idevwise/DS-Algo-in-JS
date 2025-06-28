@@ -9,6 +9,7 @@ This repository collects a few data structure and algorithm examples written in 
 - **Searching/** – search algorithms such as binary search.
 - **Sorting/** – sorting algorithms like quick sort and merge sort.
 - **Problems/** – assorted example problems.
+- **SlidingTilePuzzle/** – small browser-based puzzle implemented with HTML, CSS and JavaScript.
 - **node_modules/** – npm dependencies that come bundled with the repository.
 - `util.js` – small utility functions used by examples.
 
